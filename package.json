@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-human-interval",     "homepage": "https://github.com/npmdoc/node-npmdoc-human-interval",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-human-interval.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  human-interval (v0.1.6)  [![npm package](https://img.shields.io/npm/v/npmdoc-human-interval.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-human-interval) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-human-interval.svg)](https://travis-ci.org/npmdoc/node-npmdoc-human-interval)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-human-interval",
+    "keywords": [
+        "documentation",
+        "human-interval"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_human_interval.js",
+    "name": "npmdoc-human-interval",
+    "nameAlias": "npmdoc_human_interval",
+    "nameOriginal": "npmdoc-human-interval",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-human-interval.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
